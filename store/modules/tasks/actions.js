@@ -3,7 +3,7 @@ export default {
     commit('clearTasks')
 
     return new Promise((resolve, reject) => {
-      this.$axios.$get(payload)
+      this.$axios.$get('http://localhost:8000/tasks')
         .then((response) => {
           commit('setTasks', response)
           resolve()
